@@ -17,7 +17,7 @@ public class MultipleResourceView : MonoBehaviour
 
         foreach (var resource in resources)
         {
-            resource.ResourceQuantityChanged += UpdateText;
+            resource.QuantityChanged += UpdateText;
         }
         
     }
@@ -32,7 +32,7 @@ public class MultipleResourceView : MonoBehaviour
     {
         foreach (var resource in _resources)
         {
-            resource.ResourceQuantityChanged -= UpdateText;
+            resource.QuantityChanged -= UpdateText;
         }
     }
 }

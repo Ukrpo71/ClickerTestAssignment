@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class AddResourceButton : MonoBehaviour
 {
+    private const string Add = "Add";
+    
     [SerializeField] private Button _button;
     [SerializeField] private Text _buttonText;
 
     private Resource _resource;
-
-    private const string Add = "Add";
 
     public void Init(Resource resource)
     {
@@ -33,6 +33,6 @@ public class AddResourceButton : MonoBehaviour
         if (_resource == null)
             throw new NullReferenceException();
 
-        _resource.IncreaseResource();
+        _resource.Increase();
     }
 }

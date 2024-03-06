@@ -11,14 +11,14 @@ public class Resource
         _name = name;
     }
 
-    public void IncreaseResource()
+    public void Increase()
     {
         _value += 1;
 
-        ResourceQuantityChanged?.Invoke();
+        QuantityChanged?.Invoke();
     }
 
-    public event Action ResourceQuantityChanged;
+    public event Action QuantityChanged;
 
     public string Name => _name;
     public int Value => _value;

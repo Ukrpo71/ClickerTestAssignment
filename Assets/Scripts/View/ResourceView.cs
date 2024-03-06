@@ -13,7 +13,7 @@ public class ResourceView : MonoBehaviour
 
         UpdateText();
         
-        _resource.ResourceQuantityChanged += UpdateText;
+        _resource.QuantityChanged += UpdateText;
     }
 
     private void UpdateText()
@@ -23,6 +23,6 @@ public class ResourceView : MonoBehaviour
 
     private void OnDestroy()
     {
-        _resource.ResourceQuantityChanged -= UpdateText;
+        _resource.QuantityChanged -= UpdateText;
     }
 }
